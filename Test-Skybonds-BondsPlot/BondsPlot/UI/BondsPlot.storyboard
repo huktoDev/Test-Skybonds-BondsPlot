@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hVI-HR-1WZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bonds Plot View Controller-->
+        <scene sceneID="Z5M-WX-8LI">
+            <objects>
+                <viewController storyboardIdentifier="BondsPlot" id="hVI-HR-1WZ" customClass="BondsPlotViewController" customModule="Test_Skybonds_BondsPlot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bh5-QG-SVz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1ds-lK-GKz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DzQ-Wl-RIu" customClass="BondsPlotView" customModule="Test_Skybonds_BondsPlot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="290"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Khv-G3-l2E" customClass="ChooseBarView" customModule="Test_Skybonds_BondsPlot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="290" width="414" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="tbx-rL-zXY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="65" placeholderIntrinsicHeight="36" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6E-00-j19" customClass="ExpandButton" customModule="Test_Skybonds_BondsPlot" customModuleProvider="target">
+                                <rect key="frame" x="329" y="20" width="65" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </button>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="D8a-80-081" customClass="ChooseMenuView" customModule="Test_Skybonds_BondsPlot" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="100" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1ds-lK-GKz" firstAttribute="top" secondItem="Bh5-QG-SVz" secondAttribute="top" id="AgW-CS-4fL"/>
+                            <constraint firstItem="D8a-80-081" firstAttribute="leading" secondItem="bwo-Wf-6ST" secondAttribute="leading" constant="20" id="BoF-fb-z2X"/>
+                            <constraint firstItem="D8a-80-081" firstAttribute="top" secondItem="Bh5-QG-SVz" secondAttribute="top" constant="20" id="GCe-ol-6J5"/>
+                            <constraint firstAttribute="bottom" secondItem="1ds-lK-GKz" secondAttribute="bottom" id="MNw-4p-qNn"/>
+                            <constraint firstItem="1ds-lK-GKz" firstAttribute="trailing" secondItem="Bh5-QG-SVz" secondAttribute="trailing" id="aOq-Ma-ODN"/>
+                            <constraint firstItem="x6E-00-j19" firstAttribute="top" secondItem="Bh5-QG-SVz" secondAttribute="top" constant="20" id="au4-Vf-Wtn"/>
+                            <constraint firstItem="1ds-lK-GKz" firstAttribute="leading" secondItem="Bh5-QG-SVz" secondAttribute="leading" id="i3V-ne-tZw"/>
+                            <constraint firstAttribute="trailing" secondItem="x6E-00-j19" secondAttribute="trailing" constant="20" id="irj-NG-HT2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bwo-Wf-6ST"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="350"/>
+                    <connections>
+                        <outlet property="expandButton" destination="x6E-00-j19" id="r7M-Xy-fZY"/>
+                        <outlet property="plotView" destination="DzQ-Wl-RIu" id="O4j-zD-DRP"/>
+                        <outlet property="rangesView" destination="Khv-G3-l2E" id="1Ph-kn-JSR"/>
+                        <outlet property="typeMenuView" destination="D8a-80-081" id="ukN-PD-4kY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5f8-0G-KTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72" y="111"/>
+        </scene>
+    </scenes>
+</document>

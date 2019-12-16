@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Test View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TestViewController" customModule="Test_Skybonds_BondsPlot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJv-HN-Ib3">
+                                <rect key="frame" x="0.0" y="168" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="400" id="poP-aB-0S3"/>
+                                </constraints>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="poP-aB-0S3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="poP-aB-0S3"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="R1T-wD-YtH" kind="embed" id="eON-oh-xz2"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="gbR-bY-Vdd">
+                                <rect key="frame" x="41.333333333333343" y="67" width="331.33333333333326" height="81"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your ISIN:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="729-9A-YIm">
+                                        <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbI-E2-96P">
+                                        <rect key="frame" x="0.0" y="51" width="331.33333333333331" height="30"/>
+                                        <state key="normal" title="Apply"/>
+                                        <connections>
+                                            <action selector="applyTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="p3K-TA-n15"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fJv-HN-Ib3" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" id="3Ae-aO-OG4"/>
+                            <constraint firstItem="gbR-bY-Vdd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="5Oi-fH-IhB"/>
+                            <constraint firstItem="fJv-HN-Ib3" firstAttribute="top" secondItem="gbR-bY-Vdd" secondAttribute="bottom" constant="20" id="FT4-aP-vHv"/>
+                            <constraint firstItem="fJv-HN-Ib3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="HuA-HV-XuR"/>
+                            <constraint firstItem="gbR-bY-Vdd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Kf0-Ev-rxt"/>
+                            <constraint firstItem="fJv-HN-Ib3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="NBj-kn-8Do"/>
+                            <constraint firstItem="fJv-HN-Ib3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OuL-EB-6a9"/>
+                            <constraint firstItem="gbR-bY-Vdd" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="eHE-Hj-wM8"/>
+                            <constraint firstItem="gbR-bY-Vdd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ejs-2M-IS3"/>
+                            <constraint firstItem="fJv-HN-Ib3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="k3O-vs-GaC"/>
+                            <constraint firstItem="fJv-HN-Ib3" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="rtt-64-mf3"/>
+                            <constraint firstItem="fJv-HN-Ib3" firstAttribute="leading" secondItem="gbR-bY-Vdd" secondAttribute="trailing" constant="20" id="tIQ-AM-gT2"/>
+                            <constraint firstItem="fJv-HN-Ib3" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="uUO-Q1-4Yp"/>
+                            <constraint firstAttribute="trailing" secondItem="fJv-HN-Ib3" secondAttribute="trailing" id="wZV-XF-cSy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Kf0-Ev-rxt"/>
+                                <exclude reference="eHE-Hj-wM8"/>
+                                <exclude reference="FT4-aP-vHv"/>
+                                <exclude reference="HuA-HV-XuR"/>
+                                <exclude reference="NBj-kn-8Do"/>
+                                <exclude reference="OuL-EB-6a9"/>
+                                <exclude reference="rtt-64-mf3"/>
+                                <exclude reference="tIQ-AM-gT2"/>
+                                <exclude reference="uUO-Q1-4Yp"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="5Oi-fH-IhB"/>
+                                <include reference="Kf0-Ev-rxt"/>
+                                <include reference="eHE-Hj-wM8"/>
+                                <exclude reference="ejs-2M-IS3"/>
+                                <exclude reference="FT4-aP-vHv"/>
+                                <include reference="HuA-HV-XuR"/>
+                                <exclude reference="NBj-kn-8Do"/>
+                                <include reference="OuL-EB-6a9"/>
+                                <exclude reference="k3O-vs-GaC"/>
+                                <exclude reference="rtt-64-mf3"/>
+                                <include reference="tIQ-AM-gT2"/>
+                                <include reference="uUO-Q1-4Yp"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="5Oi-fH-IhB"/>
+                                <include reference="Kf0-Ev-rxt"/>
+                                <include reference="eHE-Hj-wM8"/>
+                                <exclude reference="ejs-2M-IS3"/>
+                                <exclude reference="FT4-aP-vHv"/>
+                                <include reference="HuA-HV-XuR"/>
+                                <include reference="OuL-EB-6a9"/>
+                                <exclude reference="k3O-vs-GaC"/>
+                                <exclude reference="rtt-64-mf3"/>
+                                <include reference="tIQ-AM-gT2"/>
+                                <include reference="uUO-Q1-4Yp"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="FT4-aP-vHv"/>
+                                <include reference="NBj-kn-8Do"/>
+                                <include reference="rtt-64-mf3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="FT4-aP-vHv"/>
+                                <include reference="NBj-kn-8Do"/>
+                                <include reference="rtt-64-mf3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="isinTextField" destination="729-9A-YIm" id="xX2-iI-kl6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="106"/>
+        </scene>
+        <!--BondsPlot-->
+        <scene sceneID="D1w-iA-VrZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BondsPlot" id="R1T-wD-YtH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8q3-XM-cy9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="106"/>
+        </scene>
+    </scenes>
+</document>

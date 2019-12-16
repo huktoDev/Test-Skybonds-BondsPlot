@@ -1,0 +1,22 @@
+PODS:
+  - Charts (3.4.0):
+    - Charts/Core (= 3.4.0)
+  - Charts/Core (3.4.0)
+  - SwiftDate (6.1.0)
+
+DEPENDENCIES:
+  - Charts
+  - SwiftDate
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - SwiftDate
+
+SPEC CHECKSUMS:
+  Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
+  SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
+
+PODFILE CHECKSUM: 2a061ae9ff157d0017414ab7542bd6f5efbdf770
+
+COCOAPODS: 1.8.4
